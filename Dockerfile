@@ -5,7 +5,7 @@ FROM tomcat:9.0
 WORKDIR /usr/local/tomcat/webapps
 
 # Copy the artifact from the project directory to the Tomcat webapps directory
-COPY ./target/javaluna-0.1.war ./
+COPY ./target/javulna-1.0-SNAPSHOT.war ./
 
 # Remove the default ROOT application (if needed)
 RUN rm -rf /usr/local/tomcat/webapps/ROOT
@@ -14,7 +14,7 @@ RUN rm -rf /usr/local/tomcat/webapps/ROOT
 RUN mv javaluna-0.1.war ROOT.war
 
 # Expose the default Tomcat port (8080)
-EXPOSE 8080
+EXPOSE 9000
 
 # Start Tomcat when the container starts
 CMD ["catalina.sh", "run"]
