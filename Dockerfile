@@ -4,10 +4,10 @@ FROM tomcat:9.0
 # Set the working directory to the Tomcat webapps directory
 #WORKDIR /usr/local/tomcat/webapps
 
-COPY context.xml /usr/local/tomcat/conf/
-COPY tomcat-users.xml /usr/local/tomcat/conf/
-#RUN mv webapps webappsSS
-#RUN mv webapps.dist webapps 
+#COPY context.xml /usr/local/tomcat/conf/
+#COPY tomcat-users.xml /usr/local/tomcat/conf/
+RUN mv webapps webappsSS
+RUN mv webapps.dist webapps 
 
 # Copy the artifact from the project directory to the Tomcat webapps directory
 COPY ./target/javulna-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/
