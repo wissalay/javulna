@@ -8,10 +8,10 @@ WORKDIR /usr/local/tomcat/webapps
 COPY ./target/javulna-1.0-SNAPSHOT.war ./
 
 # Remove the default ROOT application (if needed)
-RUN rm -rf /usr/local/tomcat/webapps/ROOT
+#RUN rm -rf /usr/local/tomcat/webapps/
 
 # Rename the WAR file to ROOT.war to deploy it as the default application
-RUN mv javaluna-0.1.war ROOT.war
+#RUN mv javaluna-0.1.war ROOT.war
 
 # Expose the default Tomcat port (8080)
 EXPOSE 9000
