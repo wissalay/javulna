@@ -2,7 +2,7 @@
 FROM tomcat:9.0
 
 # Set the working directory to the Tomcat webapps directory
-WORKDIR /usr/local/tomcat/webapps
+#WORKDIR /usr/local/tomcat/webapps
 
 #COPY context.xml /usr/local/tomcat/conf/
 #COPY tomcat-users.xml /usr/local/tomcat/conf/
