@@ -19,5 +19,10 @@ pipeline {
           sh 'mvn clean install'
       }   
     }
+   stage ('docker build') {
+      steps {
+          sh 'docker build -t javulna-0.1 .'
+      }   
+    }
   }
 }
