@@ -3,16 +3,16 @@ pipeline {
   tools {
     maven 'maven'
   }
-   stages {
+  stages {
     stage('Checkout Source') {
       steps {
         git 'https://github.com/MarwenSoula/javulna.git'
       }
-    } 
-   } 
-    stage ('Unit Test') {
+    }  
+  stage ('Unit Test') {
       steps {
           sh 'mvn test'
       }   
     }
+  }
 }
