@@ -9,4 +9,6 @@ pipeline {
         git 'https://github.com/MarwenSoula/javulna.git'
       }
     } 
+   } 
 
+}
