@@ -31,9 +31,9 @@ pipeline { // Defines a pipeline
     }
 stage ('docker run container') { // Defines the 'docker run container' stage
     steps { // Specifies the steps to be executed within this stage
-        sh 'docker stop app' // Stops any running container with the name 'app'
-        sh 'docker rm app' // Removes the container with the name 'app' if it exists
-        sh 'docker rmi javulna-0.1' // Removes the Docker image with the name 'javulna-0.1'
+        sh 'docker stop app' || true // Stops any running container with the name 'app'
+        sh 'docker rm app' || true // Removes the container with the name 'app' if it exists
+        sh 'docker rmi javulna-0.1' || true // Removes the Docker image with the name 'javulna-0.1'
         sh 'docker run --name app -it -d -p 9000:8080 javulna-0.1' // Runs a new Docker container named 'app' based on the 'javulna-0.1' image, with port mapping from 8080 to 9000, in detached mode (-d), and allocates a pseudo-TTY (-it)
      }
    }
